@@ -10,31 +10,9 @@
     <link href="./css/slimmenu.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <!-- Physical Class = 14
-    and, now online classes -->
-    
-    <!-- 12/03/2023 (Online 1) -->
-    <!-- 14/03/2023 (Online 2) -->
-    <!-- 16/03/2023 (Online 3) -->
-    <!-- 17/03/2023 (Online 4) -->
-    <!-- 19/03/2023 (Online 5) -->
-    <!-- 20/03/2023 (Online 6) - jQuery library and Meida query -->
-    <!-- 31/03/2023 (Online 7) - Revision and page addition -->
-    <!-- 02/04/2023 (Online 8) - Form validation -->
-    <!-- 03/04/2023 (Online 9) - GIT environment usecase --> 
-    <!-- 04/04/2023 (Online 10) - GIT commands --> 
-    <!-- 05/04/2023 (Online 11) - JavaScript --> 
 </head>
 <body>
-    <!-- header.header>.header-top+.header-main -->
     <header class="header">
-        <!-- Emmet coding: .header-top+.header-main 
-            emmet.io
-
-            SEO (Search Engine Optimization)
-
-            HTML4 + symentic tags usecase = HTML5
-        -->
         <div class="header-top">
             <div class="container">
                 <div class="col">
@@ -84,54 +62,49 @@
             </div>
         </div>
     </header>
-    <figure class="banner">
+    <figure class="banner banner--innerpage">
         <img src="./images/banner-img.jpg" alt="Banner Image" />
-        <figcaption class="banner-content">Explore Nepal Frequently!</figcaption>
     </figure>
-    <section class="entry-block container">
-        <div class="entry-detail">
-            <h1 class="entry-title">Welcome to <strong>Nepal</strong></h1>
-            <div class="entry-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim quasi illo, optio eum ad rerum fugiat ea deleniti natus totam, repellat numquam explicabo doloremque dolorem id asperiores aperiam voluptates.</p>
-            </div>
-            <a href="#" title="Read More" class="button">Read More</a>
-        </div>
-        <figure class="entry-image">
-            <img src="./images/banner-img.jpg" alt="Welcome to Nepal"/>
-        </figure>
-    </section>
-    <div class="form-box container">
-        <h2 class="form-title">Contact Us</h2>
-        <!-- 
-            methods: GET (None-hidden data submission)/POST (Hidden data submission)
+    <section class="page-content container">
+        <h1 class="page-title">Contact Us</h1>
+        <!-- Form data validation:
+            #1 Client-side validation
+                - HTML5 validation
+                - JavaScript validation (You should off HTML5 validation)
+            #2 Server-side validation (Dynamic/back-end)
+                - Uses of current dynamic program of server-side coding
+                (i.e.: PHP, JAVA, NodeJS, Python, ASP.NET etc...)
+            #3 Advanced server-side validation
+                - Database constraints
 
-            field:
-            - single line text (input)
-            - multi line text (textarea)
-         -->
-        <form action="#" method="GET" name="contact_form">
-            <div class="form-field">
-                <label for="fname">Full Name:</label>
-                <input type="text" value="" name="fname" id="fname" />
-                <span class="error"></span>
-            </div>
-            <div class="form-field">
-                <label for="email">Email:</label>
-                <input type="email" value="" name="email" id="email" />
-            </div>
-            <div class="form-field">
-                <label for="addr">Address:</label>
-                <input type="text" value="" name="addr" id="addr" />
-            </div>
-            <div class="form-field">
-                <label for="msg">Message:</label>
-                <textarea name="msg" id="msg" placeholder="Write your message..."></textarea>
-            </div>
-            <div class="form-field">
-                <input type="submit" value="Send Message" name="submit" />
-            </div>
-        </form>
-    </div>
+            Data (info@email.com) -> Data Type (string) -> Constraints (Unique)
+        -->
+        <div class="form-box">
+            <form action="#" method="GET" name="contact_form">
+                <div class="form-field">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" value="" name="fname" id="fname" />
+                    <span class="error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="text" value="" name="email" id="email" />
+                    <span class="error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="addr">Address:</label>
+                    <input type="text" value="" name="addr" id="addr" />
+                </div>
+                <div class="form-field">
+                    <label for="msg">Message:</label>
+                    <textarea name="msg" id="msg" placeholder="Write your message..."></textarea>
+                </div>
+                <div class="form-field">
+                    <input type="submit" value="Send Message" name="submit" />
+                </div>
+            </form>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-main clearfix">
             <div class="site-logo col">
@@ -185,7 +158,7 @@
             collapserTitle: '',
         });
     </script>
-    <script src="./script.js"></script>
+    <script src="./script.js" type="text/javascript"></script>
     <svg xmlns="http://www.w3.org/2000/svg" style="height: 0; position: absolute; opacity: 0;">
         <defs>
             <symbol id="icon-location" viewBox="0 0 32 32">

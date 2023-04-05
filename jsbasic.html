@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basic</title>
+</head>
+<body>
+    <h1>Manipulating HTML DOM with JS</h1>
+    <div class="info-box" id="box1">
+        <h2>Example box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, perferendis!</p>
+    </div>
+    <div class="info-box" id="box2">
+        <h2>New Practice</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, perferendis!</p>
+    </div>
+
+    <button id="change" onclick="changeBackground()">Change Background</button>
+    <button onclick="removeBackground()">Remove Background</button>
+
+    <!-- in HTML, CSS ID is unique 
+        Internal JavaScript -->
+    <script type="text/javascript">
+        // single line comment
+        /* Multi line comment
+        
+        Retrieving DOM element/node:
+
+        For single element:
+        - document.getElementById("selector");
+        - document.querySelector("css_selector");
+        - document.form_name.field_name;
+
+        For HTMLCollection like an array
+        - document.getElementsByTagName("selector");
+        - document.getElementsByClassName("selector");
+        - document.querySelectorAll("css_selector");
+
+        Making variable, keywords
+        ES5
+        - var       redeclare/redefine is allowed
+
+        ES6
+        - let       redeclare is not allowed, but redefine is allowed
+        - const     redeclare/redefine is not allowed
+        */
+        var name; //declare
+        name = "Yubaraj"; //define;
+        var name; //redeclare
+        name = "Rai"; //redefine
+
+        let n1; //declare
+        n1 = 10; //defiine
+        n1 = 5; //redefine
+        //let n1; //redeclare, not allowed
+
+        const addr = "Kathamndu"; //decalre and defining
+       //addr = "Koteshwor"; //not allowed
+       //const addr; //redefine is not allowed
+       
+
+       let infoBox = document.getElementsByClassName("info-box");
+       console.log(infoBox);
+
+       infoBox[0].style.backgroundColor = "yellow";
+       infoBox[0].style.width = "640px";
+       infoBox[0].style.margin = "0 auto";
+       infoBox[0].style.padding = "30px";
+
+
+        //Loop on array, first we require array
+
+        //let's convert HTMLCollection to an array
+        let arrInfoBox = Array.from(infoBox);
+        console.log(arrInfoBox);
+
+        arrInfoBox.forEach((element) => {
+            console.log(element);
+
+            element.style.border = "3px dashed red";
+            element.style.marginTop = "30px";
+        });
+
+        //Creating new element using JS 
+        let newElem1 = document.createElement("strong"),
+            jsTextCreate = document.createTextNode("Title from JS");
+
+            newElem1.innerText = jsTextCreate.textContent;
+        //Add created element inside a box before other elements
+        infoBox[1].prepend(newElem1);
+
+
+
+        //Creating new element using JS 
+        let newElem2 = document.createElement("h3"),
+            jsTextCreateAnother = document.createTextNode("Heading 3 from JS");
+
+            newElem2.innerText = jsTextCreateAnother.textContent;
+        //Add created element inside a box before other elements
+        infoBox[1].appendChild(newElem2);
+
+
+        function changeBackground() {
+            infoBox[1].style.backgroundColor = "magenta";
+        }
+
+        function removeBackground() {
+            infoBox[1].style.backgroundColor = "";
+        }
+
+    </script>
+</body>
+</html>

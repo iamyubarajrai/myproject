@@ -1,0 +1,38 @@
+GIT is a system.
+(Known as version control)
+
+Features:
+- changes log according to date
+- changes log according to user
+- Multiple branch (later it will be merge)
+examples - master
+         - developer
+         - manager
+
+- Uses repository (repo)
+
+Commands:
+- init (initialization)
+- remote add (git repository add on local project)
+- pull (download files from git platform cloud repo)
+- push (upload files on git platform cloud repo)
+- fetch
+- staging / unstaging
+- merge
+- status (checks files status)
+- commit 
+- add (add files)
+
+generally: 
+        upload: 
+        init, remote add, files add, files commit, files push
+        
+        download: pull
+
+GIT platforms:
+- github (public sharing)
+- bitbucket (corporate office use)
+- gitlab (corporate office use)
+        etc...
+
+- gitfront (sync from main platforms and share on public)
